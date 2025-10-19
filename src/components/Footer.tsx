@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, MessageCircle, MapPin } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -58,6 +58,15 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-4">Seguinos</h4>
             <div className="flex gap-4 mb-6">
               <a
+                href="https://wa.me/5491100000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,15 +74,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://wa.me/5491100000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full transition-colors"
-                aria-label="WhatsApp"
-              >
-                <Phone className="w-5 h-5" />
               </a>
               <a
                 href="https://facebook.com"
@@ -95,8 +95,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Av. San Fernando 6061<br />
-              Cuartel V, Moreno, Buenos Aires
+              Av. San Fernando 6061, entre las calles Pedro Agote y Las Bases, Cuartel V, Moreno, Buenos Aires
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Trees, Waves, ParkingCircle, UtensilsCrossed, Flame, Baby, Wine, Bath } from "lucide-react";
+import { Trees, Waves, ParkingCircle, UtensilsCrossed, Flame, Baby, Wine, Bath, Users } from "lucide-react";
 import parkImage from "@/assets/park.jpg";
 
 const features = [
@@ -31,10 +31,15 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
               Un espacio pensado para cualquier evento
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Contamos con un parque, pileta, quincho, sector parrillero, juegos para niños, 
               barra y baño, todo dentro de un entorno natural y tranquilo para disfrutar 
               en familia o con amigos.
+            </p>
+
+            <p className="flex items-center gap-3 text-muted-foreground mb-8">
+              <Users className="w-5 h-5 text-accent" />
+              <span>Capacidad máxima de 50 personas</span>
             </p>
 
             {/* Features Grid */}

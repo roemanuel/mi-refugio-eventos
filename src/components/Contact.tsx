@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Instagram, Facebook, Mail } from "lucide-react";
+import { MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -69,11 +69,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-lg text-primary mb-2">Dirección</h3>
                   <p className="text-muted-foreground">
-                    Av. San Fernando 6061, entre las calles Pedro Agote y Las Bases<br />
-                    Cuartel V, Moreno, Buenos Aires
+                    Av. San Fernando 6061, entre Pedro Agote y Las Bases, Cuartel V, Moreno, Buenos Aires
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Con fácil acceso por autopista y estacionamiento interno.
+                    Con fácil acceso por autopista.
                   </p>
                 </div>
               </div>
@@ -97,7 +96,7 @@ const Contact = () => {
                     className="p-3 bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
                     aria-label="WhatsApp"
                   >
-                    <Phone className="w-5 h-5" />
+                    <MessageCircle className="w-5 h-5" />
                   </a>
                   <a
                     href="https://instagram.com"
@@ -116,13 +115,6 @@ const Contact = () => {
                     aria-label="Facebook"
                   >
                     <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="mailto:info@mirefugioquinta.com"
-                    className="p-3 bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
-                    aria-label="Email"
-                  >
-                    <Mail className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -180,6 +172,8 @@ const Contact = () => {
                     id="guests"
                     name="guests"
                     type="number"
+                    min="1"
+                    max="50"
                     value={formData.guests}
                     onChange={handleChange}
                     placeholder="Ej: 50"
