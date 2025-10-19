@@ -22,14 +22,16 @@ const galleryImages = [
   { src: gatheringDay, alt: "Reunión familiar", category: "eventos" },
 ];
 
+type FilterType = "todo" | "dia" | "noche" | "eventos";
+
 const Gallery = () => {
-  const [filter, setFilter] = useState("todo");
+  const [filter, setFilter] = useState<FilterType>("todo");
 
   const filteredImages = filter === "todo" 
     ? galleryImages 
     : galleryImages.filter((img) => img.category === filter);
 
-  const filters = [
+  const filters: { label: string; value: FilterType }[] = [
     { label: "Todo", value: "todo" },
     { label: "Día", value: "dia" },
     { label: "Noche", value: "noche" },
