@@ -1,7 +1,7 @@
 import { Instagram, Facebook, MessageCircle, MapPin } from "lucide-react";
 
 const Footer = () => {
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

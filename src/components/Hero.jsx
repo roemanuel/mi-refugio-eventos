@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-pool.jpg";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
